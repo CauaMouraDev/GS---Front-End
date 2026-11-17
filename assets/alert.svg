@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="500" x2="500" y1="0" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17394B"/>
+      <stop offset="1" stop-color="#0B202A"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="500" x2="500" y1="526" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#397A7C"/>
+      <stop offset="1" stop-color="#102F40"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1000v760H0z"/>
+  <path stroke="#A3D3D7" stroke-opacity=".12" d="M0 118h1000M0 154h1000"/>
+  <path fill="#1C3D4D" d="m0 209 226-49 167 41v276H0z"/>
+  <path fill="#274A58" d="m740 170 260 40v307H740z"/>
+  <path fill="#335864" d="m41 245 68-14v43l-68 14zm117-24 68-14v43l-68 14zm-117 97 68-14v43l-68 14zm117-24 68-14v43l-68 14zm599-77 61 9v42l-61-9zm105 15 61 9v42l-61-9z"/>
+  <path fill="#FF6957" fill-opacity=".95" d="M518 303a69 69 0 0 0-138 0v34h138v-34Z"/>
+  <path fill="#12242B" stroke="#FF886E" stroke-width="4" d="M393 336h113v182H393z"/>
+  <path fill="#FFCF62" d="M414 357h29v46h-29z"/>
+  <path fill="#FF6957" d="M455 357h29v46h-29z"/>
+  <path fill="#0B1C29" stroke="#E7EDE5" stroke-opacity=".45" stroke-width="3" d="M404 422h91v47h-91z"/>
+  <text x="416" y="452" fill="#F5F6ED" font-family="Arial,sans-serif" font-size="19">PERIGO</text>
+  <path stroke="#FF6957" stroke-opacity=".46" stroke-width="4" d="M367 279c-26 20-38 39-38 62m198-62c26 20 38 39 38 62"/>
+  <path fill="url(#ground)" d="m0 532 1000-43v271H0z"/>
+  <path stroke="#A7E0D0" stroke-opacity=".42" stroke-width="4" d="m87 591 159-7m111-39 202-8m196 52 172-8m-631 94 163-8m320-32 174-9"/>
+  <g fill="#ECC9A1" stroke="#0B202A" stroke-width="5">
+    <circle cx="678" cy="378" r="24"/>
+    <path d="M656 407h45v82h-45z"/>
+    <path d="m657 480-19 67 19 5 25-64 18 64 19-5-15-67z"/>
+    <circle cx="765" cy="400" r="21"/>
+    <path d="M745 425h41v70h-41z"/>
+    <path d="m746 486-17 58 17 5 23-54 15 54 18-5-13-58z"/>
+  </g>
+  <path stroke="#E8F0E7" stroke-linecap="round" stroke-width="5" d="m651 421-27 21m132-6 28-18"/>
+</svg>

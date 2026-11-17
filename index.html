@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07131f">
+    <meta
+      name="description"
+      content="Conheça o ChuvAlerta: um protótipo que mede a água na rua e avisa sobre alagamentos, mesmo sem internet."
+    >
+    <title>ChuvAlerta — a rua avisa antes de alagar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Navegação principal">
+        <a class="brand" href="#inicio" aria-label="ChuvAlerta, início">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M16 3.5C12.2 9.2 7.5 14 7.5 20a8.5 8.5 0 0 0 17 0c0-6-4.7-10.8-8.5-16.5Z" fill="currentColor"/>
+              <path d="M12 20.5c0 2.2 1.6 3.8 3.8 4" stroke="#07131f" stroke-linecap="round" stroke-width="2"/>
+            </svg>
+          </span>
+          <span>Chuv<span class="brand-light">Alerta</span></span>
+        </a>
+
+        <button class="menu-toggle" id="btn-menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+          <span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="menu">
+          <li><a href="#problema">O desafio</a></li>
+          <li><a href="#solucao">A solução</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#para-quem">Para quem</a></li>
+          <li><a class="nav-cta" href="#simulador">Testar alerta <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow eyebrow-light"><span class="pulse-dot"></span> Tecnologia cidadã · São Paulo</p>
+            <h1 id="hero-title">A rua avisa.<br><span>Você muda o caminho.</span></h1>
+            <p class="hero-description">Um alerta local sobre a altura da água, para ninguém precisar descobrir o risco de perto.</p>
+            <div class="hero-actions">
+              <a class="button button-lime" href="#como-funciona">Conheça a ideia <span aria-hidden="true">↓</span></a>
+              <a class="text-link text-link-light" href="#problema">Por que isso importa?</a>
+            </div>
+            <div class="hero-footnote">
+              <span class="signal-icon" aria-hidden="true">⌁</span>
+              <span>Protótipo pensado para funcionar <strong>sem internet</strong></span>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Ilustração de um ponto de monitoramento de alagamento">
+            <div class="visual-topline">
+              <span class="live-label"><span class="pulse-dot"></span> PONTO DE MONITORAMENTO</span>
+              <span class="visual-index">01 / SP</span>
+            </div>
+            <div class="street-scene">
+              <div class="rain rain-one"></div>
+              <div class="rain rain-two"></div>
+              <div class="rain rain-three"></div>
+              <div class="building building-back"></div>
+              <div class="building building-front">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="sensor-pole">
+                <div class="sensor-cap"></div>
+                <div class="sensor-light"></div>
+                <div class="sensor-screen">15<span>cm</span></div>
+              </div>
+              <div class="sensor-beam"></div>
+              <div class="street-water"><span></span><span></span><span></span></div>
+              <div class="street-line"></div>
+              <div class="scene-caption"><span class="caption-dot"></span> Sensor no ponto mais baixo da rua</div>
+            </div>
+            <div class="visual-bottomline">
+              <span>MEDIR <b>→</b> DECIDIR <b>→</b> AVISAR</span>
+              <span class="offline-label"><span aria-hidden="true">◉</span> OFFLINE</span>
+            </div>
+            <span class="hero-orbit orbit-one" aria-hidden="true"></span>
+            <span class="hero-orbit orbit-two" aria-hidden="true"></span>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#problema"><span></span> Role para explorar</a>
+      </section>
+
+      <section class="problem section-pad" id="problema" aria-labelledby="problem-title">
+        <div class="section-shell problem-grid">
+          <div class="problem-copy">
+            <p class="eyebrow"><span class="eyebrow-number">01</span> O desafio</p>
+            <h2 id="problem-title">O perigo aparece<br>antes do aviso.</h2>
+            <p class="section-intro">Em uma rua que alaga, a água pode subir sem que quem está por perto saiba a profundidade.</p>
+            <p class="body-copy">O ChuvAlerta aproxima a informação de quem precisa decidir se atravessa, desvia ou procura um lugar seguro.</p>
+            <a class="text-link" href="#solucao">Veja como a ideia funciona <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="threshold-card">
+            <div class="threshold-heading">
+              <span class="threshold-kicker">UM LIMITE QUE IMPORTA</span>
+              <span class="threshold-icon" aria-hidden="true">↗</span>
+            </div>
+            <div class="threshold-number">15<span>cm</span></div>
+            <p>Água em movimento nessa altura já pode derrubar um adulto.</p>
+            <div class="threshold-rule"></div>
+            <div class="threshold-source">
+              <span class="source-mark">i</span>
+              <span>Referência de segurança do National Weather Service.<br>Condições reais variam; não atravesse áreas alagadas.</span>
+            </div>
+            <span class="threshold-water water-a"></span>
+            <span class="threshold-water water-b"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="solution section-pad" id="solucao" aria-labelledby="solution-title">
+        <div class="section-shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow eyebrow-light"><span class="eyebrow-number">02</span> A solução</p>
+              <h2 id="solution-title">Tecnologia simples.<br><span>Informação no lugar certo.</span></h2>
+            </div>
+            <p class="heading-aside">Um ponto crítico. Um sensor. Um aviso que não depende de sinal de celular.</p>
+          </div>
+
+          <div class="solution-grid">
+            <article class="solution-card solution-card-main">
+              <div class="card-icon card-icon-lime" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none">
+                  <path d="M16 4 5 10v12l11 6 11-6V10L16 4Z" stroke="currentColor" stroke-width="1.7"/>
+                  <path d="M11 16h10M16 11v10" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"/>
+                </svg>
+              </div>
+              <span class="card-label">NO PONTO DE ALAGAMENTO</span>
+              <h3>Mede e avisa<br>no próprio local.</h3>
+              <p>O sensor ultrassônico acompanha a água. Luzes, som e visor indicam quando o nível muda.</p>
+              <div class="card-visual-sensor" aria-hidden="true">
+                <div class="mini-sensor"></div>
+                <span class="mini-wave wave-a"></span>
+                <span class="mini-wave wave-b"></span>
+                <span class="mini-water"></span>
+              </div>
+              <span class="card-number">01</span>
+            </article>
+            <article class="solution-card">
+              <div class="card-icon card-icon-blue" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none">
+                  <path d="M7 6h18v20H7zM11 11h10M11 16h10M11 21h6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/>
+                </svg>
+              </div>
+              <span class="card-label">NA LÓGICA DO PROTÓTIPO</span>
+              <h3>Organiza os dados<br>e orienta.</h3>
+              <p>Um programa em Python registra leituras e classifica o risco para cada ponto monitorado.</p>
+              <span class="card-number">02</span>
+            </article>
+            <article class="solution-card">
+              <div class="card-icon card-icon-coral" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none">
+                  <path d="M5 24h22M8 21V12h5v9M17 21V7h6v14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/>
+                  <path d="m8 9 6-4 5 2 6-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/>
+                </svg>
+              </div>
+              <span class="card-label">NO MODELO MATEMÁTICO</span>
+              <h3>Estima o tempo<br>entre limites.</h3>
+              <p>Uma função simula a subida da água. O cenário ainda precisa ser calibrado com medições reais.</p>
+              <span class="card-number">03</span>
+            </article>
+          </div>
+
+          <div class="technology-strip" aria-label="Tecnologias do projeto">
+            <span>Feito com</span>
+            <span class="tech-chip"><i class="tech-dot tech-arduino"></i>Arduino</span>
+            <span class="tech-chip"><i class="tech-dot tech-python"></i>Python</span>
+            <span class="tech-chip"><i class="tech-dot tech-web"></i>HTML · CSS · JS</span>
+            <span class="tech-note">Sem conexão para alertar</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="levels section-pad" id="como-funciona" aria-labelledby="levels-title">
+        <div class="section-shell">
+          <div class="section-heading levels-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-number">03</span> Como funciona</p>
+              <h2 id="levels-title">Cada nível pede<br>uma atitude diferente.</h2>
+            </div>
+            <p class="heading-aside">Os mesmos limites são usados no sensor, no programa e no simulador.</p>
+          </div>
+          <div class="levels-grid">
+            <article class="level-card level-normal">
+              <div class="level-top"><span class="level-signal"></span><span>01 / MONITORAR</span></div>
+              <div class="level-measure">&lt;15<span>cm</span></div>
+              <h3>Abaixo da atenção</h3>
+              <p>O nível está abaixo do limite de atenção. Continue acompanhando as condições.</p>
+              <div class="level-bottom"><span>FAIXA DE MONITORAMENTO</span><span aria-hidden="true">↗</span></div>
+            </article>
+            <article class="level-card level-attention">
+              <div class="level-top"><span class="level-signal"></span><span>02 / EVITAR</span></div>
+              <div class="level-measure">15–29<span>cm</span></div>
+              <h3>Atenção</h3>
+              <p>Evite a rua alagada e avise quem estiver por perto.</p>
+              <div class="level-bottom"><span>ALERTA A PARTIR DE 15 CM</span><span aria-hidden="true">↗</span></div>
+            </article>
+            <article class="level-card level-danger">
+              <div class="level-top"><span class="level-signal"></span><span>03 / NÃO ATRAVESSAR</span></div>
+              <div class="level-measure">≥30<span>cm</span></div>
+              <h3>Perigo</h3>
+              <p>Não atravesse. Afaste-se da água e procure um local seguro.</p>
+              <div class="level-bottom"><span>ALERTA A PARTIR DE 30 CM</span><span aria-hidden="true">↗</span></div>
+            </article>
+          </div>
+          <p class="levels-note"><span aria-hidden="true">i</span> Os limites são referências do protótipo, não substituem alertas oficiais nem garantem segurança.</p>
+        </div>
+      </section>
+
+      <section class="community section-pad" id="para-quem" aria-labelledby="community-title">
+        <div class="section-shell community-grid">
+          <div class="community-copy">
+            <p class="eyebrow"><span class="eyebrow-number">04</span> Para quem</p>
+            <h2 id="community-title">Feito para quem<br>conhece a rua.</h2>
+            <p>Moradores de áreas sujeitas a alagamentos, pedestres, idosos e pessoas com baixa visão.</p>
+            <div class="community-objective"><span>OBJETIVO</span> Avisar no local e orientar, mesmo sem internet.</div>
+          </div>
+          <div class="benefit-list" aria-label="Benefícios esperados">
+            <article class="benefit-item">
+              <span class="benefit-index">01</span>
+              <div><h3>Mais de um jeito de perceber</h3><p>Luz, som e texto tornam o aviso mais acessível.</p></div>
+              <span class="benefit-arrow" aria-hidden="true">↗</span>
+            </article>
+            <article class="benefit-item">
+              <span class="benefit-index">02</span>
+              <div><h3>Uma escolha com informação</h3><p>O nível ajuda a decidir se é melhor desviar e avisar alguém.</p></div>
+              <span class="benefit-arrow" aria-hidden="true">↗</span>
+            </article>
+            <article class="benefit-item">
+              <span class="benefit-index">03</span>
+              <div><h3>Possibilidade de ampliar</h3><p>Um dispositivo por ponto crítico, após testes e validação.</p></div>
+              <span class="benefit-arrow" aria-hidden="true">↗</span>
+            </article>
+            <p class="community-note">Moradores, associação de bairro, subprefeitura e Defesa Civil são parceiros possíveis, ainda não confirmados.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="story section-pad" aria-labelledby="story-title">
+        <div class="section-shell story-grid">
+          <div class="story-copy">
+            <p class="eyebrow eyebrow-light"><span class="eyebrow-number">05</span> Da medição ao aviso</p>
+            <h2 id="story-title">Um sinal claro,<br><span>em poucos passos.</span></h2>
+            <p>O projeto combina componentes acessíveis para transformar uma leitura em orientação local.</p>
+            <div class="story-steps">
+              <div class="story-step"><span>01</span><p><strong>Medir</strong> a distância até a água.</p></div>
+              <div class="story-step"><span>02</span><p><strong>Classificar</strong> com limites definidos.</p></div>
+              <div class="story-step"><span>03</span><p><strong>Alertar</strong> com luz, som e texto.</p></div>
+            </div>
+          </div>
+
+          <div class="showcase" aria-label="Ilustrações do funcionamento do ChuvAlerta">
+            <div class="showcase-frame">
+              <img class="slide" src="assets/street.svg" alt="Rua urbana sob chuva, vista do ponto monitorado">
+              <img class="slide" src="assets/sensor.svg" alt="Sensor ultrassônico mede a altura da água e ativa sinais locais">
+              <img class="slide" src="assets/alert.svg" alt="Luzes, visor e aviso orientam moradores a evitar uma rua alagada">
+              <div class="showcase-overlay">
+                <span class="showcase-tag">CHUVALERTA <span aria-hidden="true">/</span> EM CAMPO</span>
+                <span class="showcase-count" id="legenda-slide" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="showcase-controls">
+              <span class="showcase-caption">Uma ideia pensada para o bairro.</span>
+              <div class="slide-buttons">
+                <button id="btn-anterior" type="button" aria-label="Ilustração anterior">←</button>
+                <button id="btn-proximo" type="button" aria-label="Próxima ilustração">→</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="simulator section-pad" id="simulador" aria-labelledby="simulator-title">
+        <div class="section-shell simulator-grid">
+          <div class="simulator-copy">
+            <p class="eyebrow"><span class="eyebrow-number">06</span> Experimente</p>
+            <h2 id="simulator-title">O que o alerta<br>diria agora?</h2>
+            <p>Informe uma altura para ver a classificação adotada no protótipo.</p>
+            <div class="simulator-disclaimer"><span aria-hidden="true">i</span><span>Esta demonstração usa valores inseridos por você. Não mede a rua em tempo real.</span></div>
+          </div>
+          <div class="simulator-panel">
+            <label for="nivel-agua">Altura da água <span>(em centímetros)</span></label>
+            <div class="input-row">
+              <div class="number-field">
+                <input id="nivel-agua" name="nivel-agua" type="number" min="0" max="500" step="1" inputmode="decimal" placeholder="Ex.: 18" aria-describedby="unit-hint">
+                <span id="unit-hint">cm</span>
+              </div>
+              <button class="button button-dark" id="btn-simular" type="button">Ver alerta <span aria-hidden="true">↗</span></button>
+            </div>
+            <div class="quick-values" aria-label="Valores para testar">
+              <span>Testar:</span>
+              <button type="button" data-level="10">10 cm</button>
+              <button type="button" data-level="20">20 cm</button>
+              <button type="button" data-level="35">35 cm</button>
+            </div>
+            <div class="simulator-result" id="resultado-simulador" role="status" aria-live="polite">
+              <span class="result-icon" aria-hidden="true">↗</span>
+              <span class="result-text">Insira um valor para ver o resultado.</span>
+            </div>
+            <p class="simulator-footnote">Classificação ilustrativa: atenção a partir de 15 cm; perigo a partir de 30 cm.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="impact section-pad" aria-labelledby="impact-title">
+        <div class="section-shell impact-grid">
+          <div>
+            <p class="eyebrow eyebrow-light"><span class="eyebrow-number">07</span> O impacto que buscamos</p>
+            <h2 id="impact-title">Mais tempo para<br><span>escolher outro caminho.</span></h2>
+          </div>
+          <div class="impact-stat">
+            <span class="impact-number">7,2</span>
+            <span class="impact-unit">minutos</span>
+            <p>entre atenção e perigo no cenário hipotético de chuva violenta do modelo.</p>
+            <span class="impact-caveat">Estimativa matemática — requer validação com dados reais.</span>
+          </div>
+          <div class="impact-footer">
+            <span>Conectado aos ODS 11 e 13</span>
+            <span>Comunidades resilientes <i></i> Adaptação climática</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-top">
+        <a class="brand footer-brand" href="#inicio">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M16 3.5C12.2 9.2 7.5 14 7.5 20a8.5 8.5 0 0 0 17 0c0-6-4.7-10.8-8.5-16.5Z" fill="currentColor"/>
+              <path d="M12 20.5c0 2.2 1.6 3.8 3.8 4" stroke="#07131f" stroke-linecap="round" stroke-width="2"/>
+            </svg>
+          </span>
+          <span>Chuv<span class="brand-light">Alerta</span></span>
+        </a>
+        <p>A rua avisa antes de alagar.</p>
+        <a class="back-top" href="#inicio">Voltar ao início <span aria-hidden="true">↑</span></a>
+      </div>
+      <div class="section-shell footer-bottom">
+        <span>Projeto acadêmico · CitizenTech · São Paulo</span>
+        <span>Protótipo conceitual. Siga sempre as orientações da Defesa Civil.</span>
+      </div>
+    </footer>
+  </body>
+</html>
