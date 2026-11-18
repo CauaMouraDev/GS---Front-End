@@ -16,8 +16,8 @@
   --verde: #2a946b;
   --laranja: #d08b19;
   --vermelho: #cf563b;
-  --fonte-titulo: "Space Grotesk", sans-serif;
-  --fonte-texto: "DM Sans", sans-serif;
+  --fonte-titulo: "Lexend", sans-serif;
+  --fonte-texto: "Atkinson Hyperlegible Next", sans-serif;
 }
 
 * {
@@ -64,7 +64,7 @@ h3 {
 h2 {
   margin-bottom: 20px;
   font-size: 48px;
-  letter-spacing: -1.5px;
+  letter-spacing: -1px;
 }
 
 a:focus-visible,
@@ -203,7 +203,7 @@ button:focus-visible {
 h1 {
   margin-bottom: 20px;
   font-size: 64px;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 
 h1 span,
@@ -382,7 +382,7 @@ h1 span,
   font-size: 110px;
   font-weight: 500;
   line-height: 1;
-  letter-spacing: -6px;
+  letter-spacing: -3px;
 }
 
 .threshold-number span {
@@ -571,7 +571,7 @@ h1 span,
   font-family: var(--fonte-titulo);
   font-size: 48px;
   font-weight: 500;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 
 .level-measure span {
@@ -905,7 +905,7 @@ h1 span,
   font-family: var(--fonte-titulo);
   font-size: 96px;
   line-height: 1;
-  letter-spacing: -4px;
+  letter-spacing: -2px;
 }
 
 .impact-unit {
