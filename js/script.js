@@ -37,4 +37,80 @@ setInterval(function () {
 mostrarSlide(0);
 
 const botaoMenu = document.getElementById("btn-menu");
-const
+const menu = document.getElementById("menu");
+const linksMenu = document.querySelectorAll(".nav-links a");
+
+botaoMenu.addEventListener("click", function () {
+  menu.classList.toggle("aberto");
+});
+
+linksMenu.forEach(function (link) {
+  link.addEventListener("click", function () {
+    menu.classList.remove("aberto");
+  });
+});
+
+const secoes = document.querySelectorAll("main section");
+
+function marcarSecaoAtual() {
+  let secaoAtual = "";
+
+  secoes.forEach(function (secao) {
+    if (window.scrollY >= secao.offsetTop - 150) {
+      secaoAtual = secao.id;
+    }
+  });
+
+  linksMenu.forEach(function (link) {
+    link.classList.remove("ativo");
+
+    if (link.getAttribute("href") === "#" + secaoAtual) {
+      link.classList.add("ativo");
+    }
+  });
+}
+
+window.addEventListener("scroll", marcarSecaoAtual);
+marcarSecaoAtual();
+
+const campoNivel = document.getElementById("nivel-agua");
+const botaoSimular = document.getElementById("btn-simular");
+const resultado = document.getElementById("resultado-simulador");
+const textoResultado = resultado.querySelector(".result-text");
+const botoesTeste = document.querySelectorAll(".quick-values button");
+
+function simularAlerta() {
+  const nivel = Number(campoNivel.value);
+
+  if (campoNivel.value === "" || nivel < 0 || nivel > 500) {
+    resultado.className = "simulator-result erro";
+    textoResultado.textContent = "Digite uma altura entre 0 e 500 cm.";
+    return;
+  }
+
+  if (nivel >= 30) {
+    resultado.className = "simulator-result perigo";
+    textoResultado.textContent = "PERIGO: não atravesse. Saia de perto da água e procure um lugar seguro.";
+  } else if (nivel >= 15) {
+    resultado.className = "simulator-result atencao";
+    textoResultado.textContent = "ATENÇÃO: evite a rua alagada e avise quem estiver por perto.";
+  } else {
+    resultado.className = "simulator-result normal";
+    textoResultado.textContent = "NORMAL: a água está abaixo do limite. Continue acompanhando.";
+  }
+}
+
+botaoSimular.addEventListener("click", simularAlerta);
+
+campoNivel.addEventListener("keydown", function (evento) {
+  if (evento.key === "Enter") {
+    simularAlerta();
+  }
+});
+
+botoesTeste.forEach(function (botao) {
+  botao.addEventListener("click", function () {
+    campoNivel.value = botao.getAttribute("data-level");
+    simularAlerta();
+  });
+});
